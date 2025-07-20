@@ -6,13 +6,6 @@ import { cn } from "../lib/utils";
 import { useTheme } from "next-themes";
 import { Moon, Sun, AlignRight, X } from "lucide-react"
 import Link from "next/link";
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { Button } from "./ui/button";
-import { Menu as MenuIcon } from "lucide-react"
 import { usePathname } from 'next/navigation'
 
 
