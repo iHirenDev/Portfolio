@@ -78,11 +78,11 @@ function Navbar({className}: {className?: string}) {
         </MenuItem>
       </Link>
         
-      <button className="btn btn-circle -mt-2 text-black dark:text-white bg-white dark:bg-black" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+      <button className="px-2" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
            {mounted ? (
               theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />
                 ) : (
-                <Moon className="h-6 w-6 opacity-30" /> // or show a placeholder icon
+                <Moon className="h-6 w-6" /> // or show a placeholder icon
             )}
       </button>
     </Menu>
@@ -116,9 +116,9 @@ function Navbar({className}: {className?: string}) {
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-200">
+        <div className="flex items-center justify-between bg-white dark:bg-black/90 p-4 border-b border-gray-200">
           {/* <span className="text-lg font-semibold text-gray-800">Menu</span> */}
-          <button className="btn btn-circle -mt-2 text-black dark:text-white bg-white dark:bg-black" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          <button className="" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
            {mounted ? (
               theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />
                 ) : (
@@ -130,7 +130,7 @@ function Navbar({className}: {className?: string}) {
             className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 focus:outline-none"
             aria-label="Close menu"
           >
-            <X className="h-6 w-6 rounded-sm border border-gray-800" />
+            <X className="h-6 w-6 rounded-sm text-foreground border border-foreground" />
           </button>
         </div>
 
