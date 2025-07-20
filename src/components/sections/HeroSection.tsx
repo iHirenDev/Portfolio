@@ -58,19 +58,20 @@ function HeroSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
         >
           <div className="flex flex-col justify-center items-center md:justify-start md:items-start gap-6">
-            <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
                   {`<Designer/>`}
             </h1>
-            <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
                   {`<Developer/>`}
             </h1>
-            <h1 className="text-2xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tighter ">
                   {`<Problem Solver/>`}
             </h1>
 
-            <div className='hidden lg:flex flex-row'>
-              <p className='text-2xl font-semibold mr-2'>Hi, I am Hiren. I am </p>
+            <div className='flex flex-col lg:flex-row items-center'>
+              <p className='text-2xl font-semibold mr-2'>Hi, I am Hiren. I am</p>
              <div className='text-2xl text-foreground font-semibold'>
+            
               <Typewriter
               options={{
                 strings: ['Frontend Developer.', 'Mobile Developer.'],
@@ -134,9 +135,8 @@ function HeroSection() {
             </div>
           </div>
           
-          <div className='hidden md:block -mt-20'>
             
-            <div className="relative order-first md:order-last flex justify-center">
+            <div className="relative order-first md:order-last flex justify-center -mt-30">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-8 border-gray-600 shadow-2xl animate-fadeIn">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary/80">
@@ -181,7 +181,7 @@ function HeroSection() {
             </BackgroundGradient>
       </div> */}
 
-          </div>
+          
         </div>
         
 
