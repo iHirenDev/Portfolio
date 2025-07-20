@@ -49,7 +49,7 @@ function ContactSection() {
       link: "https://www.linkedin.com/in/ihirenpatel/",
     },
     {
-      icon: <Image src="/sof.svg" alt="hiren" className="h-5 w-5" />,
+      icon: <Image src="/sof.svg" width={20} height={20} alt="hiren" className="h-5 w-5" />,
       label: "Stack Overflow",
       value: "Hiren Patel",
       link: "https://stackoverflow.com/users/2552460/hiren",

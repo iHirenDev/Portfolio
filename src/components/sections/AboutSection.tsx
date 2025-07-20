@@ -28,6 +28,8 @@ function AboutSection() {
               <Image 
                 src="/coding.jpg" 
                 alt="Developer at work"
+                width={500}
+                height={500}
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
