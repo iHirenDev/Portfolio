@@ -1,7 +1,6 @@
 'use client'
 
 import React, {useRef, useEffect, useState} from 'react'
-import { Button } from '../ui/moving-border'
 import { Button as CustomButton } from '../ui/button'
 import { Github, ArrowDownCircle, Linkedin } from 'lucide-react'
 import Typewriter from 'typewriter-effect'
@@ -11,18 +10,6 @@ function HeroSection() {
   const bgRef = useRef<HTMLDivElement>(null)
 
   const [mounted, setMounted] = useState(false)
-
-  const typeWriterEffectWords = [
-    {
-      text:'Frontend Developer',
-      className:'text-blue-500 dark:text-blue-400'
-    },
-    {
-      text:'Mobile Developer',
-      className:'text-blue-500 dark:text-blue-400'
-    }
-  ]
-
 
   useEffect(() => {
 

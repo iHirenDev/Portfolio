@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { HoveredLink, Menu, MenuItem, ProductItem } from '../components/ui/navbar-menu';
+import {  Menu, MenuItem } from '../components/ui/navbar-menu';
 import { cn } from "../lib/utils";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react"
@@ -23,7 +23,7 @@ function Navbar({className}: {className?: string}) {
 
   useEffect(() => {
     setMounted(true)
-  })
+  },[])
   // if (!mounted) return null 
 
   

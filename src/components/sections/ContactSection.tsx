@@ -1,9 +1,9 @@
 'use client'
 import React, { useRef, useState } from 'react'
 import { Card, CardContent } from '../ui/card'
-import Form from 'next/form'
 import { Button } from '../ui/button'
-import { Github, Mail, Linkedin, MapPin, Phone } from 'lucide-react'
+import { Github, Mail, Linkedin, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 
 function ContactSection() {
@@ -49,7 +49,7 @@ function ContactSection() {
       link: "https://www.linkedin.com/in/ihirenpatel/",
     },
     {
-      icon: <img src="/sof.svg" alt="hiren" className="h-5 w-5" />,
+      icon: <Image src="/sof.svg" alt="hiren" className="h-5 w-5" />,
       label: "Stack Overflow",
       value: "Hiren Patel",
       link: "https://stackoverflow.com/users/2552460/hiren",

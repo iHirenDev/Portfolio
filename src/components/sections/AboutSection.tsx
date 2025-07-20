@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function AboutSection() {
@@ -24,7 +25,7 @@ function AboutSection() {
         </div>
         <div className="mt-2 relative order-first lg:order-last">
             <div className="aspect-square overflow-hidden rounded-xl">
-              <img 
+              <Image 
                 src="/coding.jpg" 
                 alt="Developer at work"
                 className="w-full h-full object-cover"

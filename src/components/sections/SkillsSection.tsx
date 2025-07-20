@@ -19,17 +19,17 @@ function SkillsSection() {
     },
   };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.1,
-      duration: 0.4,
-    },
-  }),
-};
+// const cardVariants = {
+//   hidden: { opacity: 0, y: 20 },
+//   visible: (i: number) => ({
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       delay: i * 0.1,
+//       duration: 0.4,
+//     },
+//   }),
+// };
 
   return (
       <motion.section 
@@ -50,7 +50,7 @@ const cardVariants = {
                 </h3>
                 
                 <div className='col-span-3 grid grid-cols-2 md:grid-cols-3 gap-3'>
-                  {category.items.map((item, index) => (
+                  {category.items.map((item) => (
                     <Tooltip.Provider delayDuration={100} key={item.name}>
                     <Tooltip.Root>
                       <Tooltip.Trigger asChild>

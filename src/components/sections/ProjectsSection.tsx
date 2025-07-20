@@ -5,9 +5,8 @@ import {GithubProjects} from '../../lib/github'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 import { HoverEffect } from '../ui/card-hover-effect'
 import { motion } from 'framer-motion'
-import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 
 
 interface ProjectSectionProps {
