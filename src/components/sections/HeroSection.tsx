@@ -4,11 +4,13 @@ import React, {useRef, useEffect, useState} from 'react'
 import { Button as CustomButton } from '../ui/button'
 import { Github, ArrowDownCircle, Linkedin } from 'lucide-react'
 import Typewriter from 'typewriter-effect'
+import Image from 'next/image'
 
 function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null)
   const bgRef = useRef<HTMLDivElement>(null)
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -138,7 +140,7 @@ function HeroSection() {
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-8 border-gray-600 shadow-2xl animate-fadeIn">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 animate-pulse">
               <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-primary/80">
-              <img 
+              <Image 
                 src="https://avatars.githubusercontent.com/u/6905075?v=4" 
                 alt="Github" 
                 height={350}

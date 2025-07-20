@@ -62,7 +62,7 @@ function ContactSection() {
         <div className='flex flex-col justify-center items-center text-3xl font-bold mb-16'>{`<Contact Me/>`}
           <p className='text-lg max-w-6xl py-4'>
             If you want to know more about me or my work, or if you would just
-            like to say hello, send me a message. I'd love to hear from you.
+            like to say hello, send me a message. I&apos;d love to hear from you.
           </p>
         </div>
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>

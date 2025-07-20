@@ -4,7 +4,7 @@ import { Badge } from "./badge";
 import { Button } from "./button";
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "./card";
 import React, { useState } from "react";
-import { Github, ExternalLink } from "lucide-react";
+import { Github } from "lucide-react";
 
 type GithubProject ={
   id: number
@@ -26,7 +26,7 @@ export const HoverEffect = ({
  
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   
   return (
     <div
