@@ -1,8 +1,8 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import {  Menu, MenuItem } from '../components/ui/navbar-menu';
-import { cn } from "../lib/utils";
+import {  Menu, MenuItem } from '../ui/navbar-menu';
+import { cn } from "../../lib/utils";
 import { useTheme } from "next-themes";
 import { Moon, Sun, AlignRight, X } from "lucide-react"
 import Link from "next/link";
