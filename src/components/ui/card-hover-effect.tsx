@@ -19,10 +19,9 @@ type GithubProject ={
 }
 export const HoverEffect = ({
   project,
-  
   className,
 }: {
-  project: GithubProject;
+  project?: GithubProject;
  
   className?: string;
 }) => {
@@ -39,7 +38,7 @@ export const HoverEffect = ({
       
           key={project?.html_url}
           className="relative group  block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(project?.id)}
+          onMouseEnter={() => setHoveredIndex(project!.id)}
           onMouseLeave={() => setHoveredIndex(null)}
         >
           <AnimatePresence>
@@ -62,21 +61,21 @@ export const HoverEffect = ({
          
           <Card className="flex flex-col justify-center">
             
-            <CardTitle>{project.name}</CardTitle>
-            <CardDescription>{project.description || 'No description available.'}</CardDescription>
+            <CardTitle>{project!.name}</CardTitle>
+            <CardDescription>{project!.description || 'No description available.'}</CardDescription>
             <CardContent className="flex-grow">
               <div className="flex flex-wrap gap-2">
-                  {project.topics.map((topic) => (
+                  {project!.topics.map((topic) => (
                     <Badge key={topic} variant="secondary">{topic}</Badge>
                     ))}
-                    {project.language && (
-                      <Badge variant="default">{project.language}</Badge>
+                    {project!.language && (
+                      <Badge variant="default">{project!.language}</Badge>
                     )}
               </div>
             </CardContent>
              <CardFooter className="flex justify-between">
                 <Button variant="outline" size="sm" asChild>
-                   <a href={project.html_url} target="_blank" rel="noreferrer">
+                   <a href={project!.html_url} target="_blank" rel="noreferrer">
                       <Github className="mr-2 h-4 w-4" />
                           Code
                       </a>

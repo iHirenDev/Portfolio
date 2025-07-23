@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Hiren Patel",
-  description: "iHirenDev Github portfolio",
+  description: "A Github portfolio website showcasing my skills",
+  keywords:"iHirenDev, Vercel, Hiren Patel, Github Portfolio"
 };
 
 export default function RootLayout({
@@ -32,7 +33,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

@@ -3,25 +3,18 @@
 import React, { useState, useEffect } from "react";
 import {  Menu, MenuItem } from '../ui/navbar-menu';
 import { cn } from "../../lib/utils";
-import { useTheme } from "next-themes";
-import { Moon, Sun, AlignRight, X } from "lucide-react"
+import { AlignRight, X } from "lucide-react"
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
-
+import { ThemeToggle } from "../theme-toggle";
 
 
 
 function Navbar({className}: {className?: string}) {
   const [active, setActive] = useState<string | null>(null);
-  const {theme, setTheme} = useTheme();
-  const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
 
-  useEffect(() => {
-    setMounted(true)
-  },[])
-  // if (!mounted) return null 
 
   // Close menu when route changes
   useEffect(() => {
@@ -41,6 +34,8 @@ function Navbar({className}: {className?: string}) {
       document.body.style.overflow = 'unset'
     }
   }, [isOpen])
+    
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
@@ -77,14 +72,16 @@ function Navbar({className}: {className?: string}) {
         <MenuItem setActive={setActive} active={active} item="Contact">
         </MenuItem>
       </Link>
-        
-      <button className="px-2" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+      <ThemeToggle />
+      {/* <button className="px-2" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
            {mounted ? (
-              theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />
+              theme === "dark" ? 
+              <Sun className="h-6 w-6" /> : 
+              <Moon className="h-6 w-6" />
                 ) : (
                 <Moon className="h-6 w-6" /> // or show a placeholder icon
             )}
-      </button>
+      </button> */}
     </Menu>
     
     </div>
@@ -118,13 +115,14 @@ function Navbar({className}: {className?: string}) {
       >
         <div className="flex items-center justify-between bg-white dark:bg-black/90 p-4 border-b border-gray-200">
           {/* <span className="text-lg font-semibold text-gray-800">Menu</span> */}
-          <button className="" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+          {/* <button className="" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
            {mounted ? (
               theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />
                 ) : (
                 <Moon className="h-6 w-6 opacity-30" /> // or show a placeholder icon
             )}
-          </button>
+          </button> */}
+          <ThemeToggle />
           <button
             onClick={toggleMenu}
             className="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-gray-800 focus:outline-none"
@@ -157,47 +155,6 @@ function Navbar({className}: {className?: string}) {
 
       {/* Spacer to push content below fixed navbar */}
       <div className="lg:hidden h-16" />
-
-    {/* <div className="md:hidden container flex h-16 items-center justify-between py-4">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-bold text-xl">Hiren Patel</span>
-        </Link>
-    <div className="flex md:hidden items-center space-x-4">
-      <button className="btn btn-circle text-black dark:text-white bg-white dark:bg-black" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-           {mounted ? (
-              theme === "dark" ? <Sun className="h-6 w-6" /> : <Moon className="h-6 w-6" />
-                ) : (
-                <Moon className="h-6 w-6 opacity-30" /> // or show a placeholder icon
-            )}
-      </button>
-          <div className=""></div>
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <MenuIcon className="h-5 w-5" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <nav className="flex flex-col gap-4 pt-8">
-                <Link href="#" className="px-2 py-1 text-lg font-medium">
-                  Home
-                </Link>
-                <Link href="#about" className="px-2 py-1 text-lg font-medium">
-                  About
-                </Link>
-                <Link href="#projects" className="px-2 py-1 text-lg font-medium">
-                  Projects
-                </Link>
-                <Link href="#contact" className="px-2 py-1 text-lg font-medium">
-                  Contact
-                </Link>
-              </nav>
-            </SheetContent>
-          </Sheet>
-        </div>
-
-    </div> */}
     </>
   )
 }

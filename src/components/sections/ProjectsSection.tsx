@@ -15,12 +15,31 @@ interface ProjectSectionProps {
 
 function ProjectsSection({projects}:ProjectSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState('featured');
 
   const languages = Array.from(new Set((projects || []).map(project => project.language).filter(Boolean)))
 
-  const filteredProjects = activeTab === 'all'
-    ? projects
+  const featuredProjectNames = [
+      'Portfolio',
+      'Narrato',
+      'CodersBlog',
+      'TMDB-MovieApp',
+      'FoodMates',
+      'Tithi',
+      'WorldNews',
+      'Flutter-MVVM-Demo'
+    ];
+
+    const featuredProjects = featuredProjectNames
+          .map(name => (projects || []).find(project => project.name === name))
+          .filter(Boolean);
+
+  
+
+  const filteredProjects = activeTab === 'featured'
+    ? featuredProjects
+    : activeTab === 'all' 
+    ? projects 
     : projects.filter(project => project.language === activeTab);
 
   
@@ -66,6 +85,7 @@ function ProjectsSection({projects}:ProjectSectionProps) {
         
         <div className="flex justify-center">
             <TabsList className="flex flex-wrap h-fit justify-start border border-zinc-200 dark:border-zinc-700 gap-2 dark:bg-zinc-800">
+              <TabsTrigger  value="featured">Featured</TabsTrigger>
               <TabsTrigger  value="all">All</TabsTrigger>
               {languages.map((language) => (
                 <TabsTrigger key={language} value={language}>{language}</TabsTrigger>
@@ -83,7 +103,7 @@ function ProjectsSection({projects}:ProjectSectionProps) {
             >
               {
                 filteredProjects.map((project) => (
-                  <motion.div key={project.id} variants={itemVariants}> 
+                  <motion.div key={project?.id} variants={itemVariants}> 
                      <div className='max-w-5xl h-full px-4 py-4'>
                        <HoverEffect project={project} className="h-full flex flex-col"/>
                      </div>
