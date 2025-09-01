@@ -2,7 +2,7 @@
 import {cache} from 'react'
 
 export type GithubProjects ={
-  id: number
+  id: number | string
   name: string
   description: string
   html_url: string

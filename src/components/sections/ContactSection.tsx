@@ -87,7 +87,7 @@ function ContactSection() {
                 <textarea className='border border-gray-600 dark:border-gray-300 rounded-lg p-2' id="message" placeholder="Your message" rows={5} required />
               </div>
               
-              <Button type="submit" className="w-full text-white" disabled={isSubmitting}>
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
         </form>

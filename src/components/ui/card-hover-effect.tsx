@@ -4,10 +4,10 @@ import { Badge } from "./badge";
 import { Button } from "./button";
 import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "./card";
 import React, { useState } from "react";
-import { Github } from "lucide-react";
+import { Github, SquareArrowOutUpRight } from "lucide-react";
 
 type GithubProject ={
-  id: number
+  id: number | string
   name: string
   description: string
   html_url: string
@@ -25,7 +25,7 @@ export const HoverEffect = ({
  
   className?: string;
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number| string | null>(null);
   
   return (
     <div
@@ -69,17 +69,29 @@ export const HoverEffect = ({
                     <Badge key={topic} variant="secondary">{topic}</Badge>
                     ))}
                     {project!.language && (
-                      <Badge variant="default">{project!.language}</Badge>
+                      <Badge className="mt-2" variant="default">{project!.language}</Badge>
                     )}
               </div>
             </CardContent>
              <CardFooter className="flex justify-between">
-                <Button variant="outline" size="sm" asChild>
-                   <a href={project!.html_url} target="_blank" rel="noreferrer">
-                      <Github className="mr-2 h-4 w-4" />
-                          Code
-                      </a>
-                </Button>          
+             {project!.html_url && (
+      <Button variant="outline" size="sm" asChild>
+        <a href={project!.html_url} target="_blank" rel="noreferrer">
+          <Github className="mr-2 h-4 w-4" />
+          Code
+          <SquareArrowOutUpRight className="ml-2 h-4 w-4" />
+        </a>
+      </Button>
+    )}
+    {project!.homepage && (
+      <Button variant="default" size="sm" asChild>
+        <a href={project!.homepage} target="_blank" rel="noreferrer">
+          
+          Live Demo
+          <SquareArrowOutUpRight className="ml-2 h-4 w-4" />
+        </a>
+      </Button>
+    )}          
               </CardFooter>
           </Card>
         </div>

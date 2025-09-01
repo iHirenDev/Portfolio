@@ -13,16 +13,31 @@ interface ProjectSectionProps {
   projects: GithubProjects[]
 }
 
+
+const manualProjects: GithubProjects[] = [{
+  id:'colorly',
+  name: 'Colorly',
+  description: 'A NextJS project built with features like Color converter, Palette Generator and Gradient Makers.',
+  html_url: '',
+  homepage: 'https://colorly-gamma.vercel.app/',
+  topics: ['react', 'tailwindcss', 'nextjs', 'shadcn'],
+  language: 'TypeScript',
+  stargazers_count: 0,
+  fork: false
+}]
+
 function ProjectsSection({projects}:ProjectSectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeTab, setActiveTab] = useState('featured');
 
   const languages = Array.from(new Set((projects || []).map(project => project.language).filter(Boolean)))
 
+  const combinedProjects = [...manualProjects, ...(projects || [])];
+
   const featuredProjectNames = [
+      'Colorly',
       'Portfolio',
       'Narrato',
-      'CodersBlog',
       'TMDB-MovieApp',
       'FoodMates',
       'Tithi',
@@ -31,7 +46,7 @@ function ProjectsSection({projects}:ProjectSectionProps) {
     ];
 
     const featuredProjects = featuredProjectNames
-          .map(name => (projects || []).find(project => project.name === name))
+          .map(name => combinedProjects.find(project => project.name === name))
           .filter(Boolean);
 
   
@@ -39,8 +54,8 @@ function ProjectsSection({projects}:ProjectSectionProps) {
   const filteredProjects = activeTab === 'featured'
     ? featuredProjects
     : activeTab === 'all' 
-    ? projects 
-    : projects.filter(project => project.language === activeTab);
+    ? combinedProjects 
+    : combinedProjects.filter(project => project.language === activeTab);
 
   
   const containerVariants = {
@@ -74,7 +89,7 @@ function ProjectsSection({projects}:ProjectSectionProps) {
     <div className='container px-4'>
       <div className='flex flex-col items-center text-center mb-16'>
         <h2 className='text-3xl sm:text-4xl font-bold mb-4 tracking-tight'>{`<Github Projects/>`}</h2>
-        <p className='text-lg max-w-2xl'>A showcase of my GitHub projects and contributions.</p>
+        <p className='text-lg max-w-2xl'>A showcase of my projects and contributions.</p>
       </div>
     
     <Tabs 
