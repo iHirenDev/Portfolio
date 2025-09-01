@@ -68,6 +68,8 @@ export const HoverEffect = ({
                   {project!.topics.map((topic) => (
                     <Badge key={topic} variant="secondary">{topic}</Badge>
                     ))}
+              </div>
+              <div>
                     {project!.language && (
                       <Badge className="mt-2" variant="default">{project!.language}</Badge>
                     )}
