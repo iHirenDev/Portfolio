@@ -15,7 +15,7 @@ function AboutSection() {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 p-2'>
           {/* <h2 className='text-2xl font-bold underline'>A bit about me</h2> */}
           <div className='px-2'>
-          <p className='mt-4 text-justify text-lg'>Front-End and Mobile Application Developer with experience in React, React Native, Flutter, and Next.js. I have a Master's degree in ICT from Western Sydney University. I have built web and mobile applications that involve API integration, authentication, state management, and responsive UI development.
+          <p className='mt-4 text-justify text-lg'>Front-End and Mobile Application Developer with experience in React, React Native, Flutter, and Next.js. I have a Masters degree in ICT from Western Sydney University. I have built web and mobile applications that involve API integration, authentication, state management, and responsive UI development.
 </p>
           <p className='mt-4 text-justify text-lg'>
             I am eager to grow my career in the IT industry and enjoy learning new tools and technologies. Along with my technical skills, I have over nine years of customer service experience in Australia. This background has improved my communication skills and user-focused approach.
