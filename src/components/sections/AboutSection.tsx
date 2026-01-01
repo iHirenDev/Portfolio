@@ -15,11 +15,12 @@ function AboutSection() {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 p-2'>
           {/* <h2 className='text-2xl font-bold underline'>A bit about me</h2> */}
           <div className='px-2'>
-          <p className='mt-4 text-justify text-lg'>I am a self-taught frontend developer and mobile app developer. I have a passion for creating visually appealing and user-friendly mobile applications and websites.</p>
+          <p className='mt-4 text-justify text-lg'>Front-End and Mobile Application Developer with experience in React, React Native, Flutter, and Next.js. I have a Master's degree in ICT from Western Sydney University. I have built web and mobile applications that involve API integration, authentication, state management, and responsive UI development.
+</p>
           <p className='mt-4 text-justify text-lg'>
-            With a Master’s degree in Information and Communication Technology from Western Sydney University and a strong passion for software development, I have built expertise in React, React Native, Flutter, and iOS development. Currently, I am focused on honing my skills in NextJS and expanding my knowledge in backend development.
+            I am eager to grow my career in the IT industry and enjoy learning new tools and technologies. Along with my technical skills, I have over nine years of customer service experience in Australia. This background has improved my communication skills and user-focused approach.
             <br/> <br/> 
-            In addition to my technical background, I bring over 7 years of experience in retail, customer service, and operations management. This experience has honed my leadership, problem-solving, and team collaboration skills—attributes that are invaluable in software development and project management.
+           I regularly use modern AI tools like ChatGPT, Claude AI, and Kiro IDE to boost development efficiency, debugging, and learning. I take full responsibility for writing clean, maintainable, production-ready code.
 
 </p>
         </div>
