@@ -88,8 +88,10 @@ export const HoverEffect = ({
     {project!.homepage && (
       <Button variant="default" size="sm" asChild>
         <a href={project!.homepage} target="_blank" rel="noreferrer">
+          { 
+          project!.homepage.includes('play.google.com') ? 'Play Store' : 'Live Demo'
+          }
           
-          Live Demo
           <SquareArrowOutUpRight className="ml-2 h-4 w-4" />
         </a>
       </Button>
