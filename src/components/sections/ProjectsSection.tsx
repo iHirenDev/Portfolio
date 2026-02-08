@@ -35,9 +35,9 @@ function ProjectsSection({projects}:ProjectSectionProps) {
   const combinedProjects = [...manualProjects, ...(projects || [])];
 
   const featuredProjectNames = [
+      'Narrato',
       'Colorly',
       'Portfolio',
-      'Narrato',
       'TMDB-MovieApp',
       'FoodMates',
       'Tithi',
