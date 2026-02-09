@@ -37,7 +37,6 @@ function ProjectsSection({projects}:ProjectSectionProps) {
   const featuredProjectNames = [
       'Narrato',
       'Colorly',
-      'Portfolio',
       'TMDB-MovieApp',
       'FoodMates',
       'Tithi',
@@ -137,7 +136,7 @@ function ProjectsSection({projects}:ProjectSectionProps) {
           rel='noreferrer'
           >
           <Github className="mr-2 h-5 w-5" />
-          View my Github
+          View my Github profile
         </a>
       </Button>
     </div>

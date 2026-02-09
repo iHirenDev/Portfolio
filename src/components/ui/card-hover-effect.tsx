@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardTitle } from "./car
 import React, { useState } from "react";
 import { Github, SquareArrowOutUpRight } from "lucide-react";
 
-type GithubProject ={
+type GithubProject = {
   id: number | string
   name: string
   description: string
@@ -89,7 +89,7 @@ export const HoverEffect = ({
       <Button variant="default" size="sm" asChild>
         <a href={project!.homepage} target="_blank" rel="noreferrer">
           { 
-          project!.homepage.includes('play.google.com') ? 'Play Store' : 'Live Demo'
+          project!.homepage.includes('play.google.com') ? 'Visit Play Store' : 'Visit Website'
           }
           
           <SquareArrowOutUpRight className="ml-2 h-4 w-4" />
